@@ -1,0 +1,2 @@
+/*global window, require, document, define, assert:true, should:true, expect:true, mocha:true, console:true, $ */
+/*jslint plusplus: true, es5:true, vars: true, indent: 2, nomen: true */
