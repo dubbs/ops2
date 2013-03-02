@@ -1,10 +1,17 @@
 (function () {
-  "use strict";
+  'use strict';
 
-  $.get('data/resources.txt', function(data) {
-    var sections = data.split("\n");
+  $.get('data/resources.txt', function (data) {
+    var sections = data.split('\n');
+    delete sections[sections.length - 1];
     $.each(sections, function (index, section) {
+      // create tab
       section = section.replace('/', '_');
+      // create tab
+      $('.tabs').append('<dd><a href="#' + section + '">' + section + '</a></dd>');
+      // create container
+      $('.tabs-content').append('<li id="' + section + 'Tab"><table class="twelve"><thead><tr><th>Description</th><th>XP</th><th>Progress</th></tr></thead><tbody></tbody></table></li>');
+
       $.get('data/' + section + '.html', function (data) {
         var $rows = $(data).find('.challenge_list');
         $rows.find('> li').each(function () {
@@ -20,5 +27,5 @@
       });
     });
   });
-  
+
 }());
