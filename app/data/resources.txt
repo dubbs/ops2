@@ -1,0 +1,7 @@
+assignments
+attachment
+gamemode
+prestige
+scorestreak
+primary/weapon_smg
+primary/weapon_assault
