@@ -3,7 +3,7 @@
 
   $.get('data/resources.txt', function (data) {
     var sections = data.split('\n');
-    delete sections[sections.length - 1];
+    sections = sections.slice(0, sections.length - 1);
     $.each(sections, function (index, section) {
       // create tab
       section = section.replace('/', '_');
